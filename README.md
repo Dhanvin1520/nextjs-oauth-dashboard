@@ -71,11 +71,22 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 2. **Environment Variables**: Ensure all required vars are set
 3. **Build Errors**: Clear `.next` folder and reinstall dependencies
 
+
+##Challenges:
+
+
+	.Voice Greeting Triggering: Ensuring that the voice greeting is played only once after login and not every time the /hello page is visited.
+	•3D Performance Optimization: Balancing visual quality and performance for Three.js animations across devices.
+	•OAuth Redirect Handling: Making sure the redirect URI works seamlessly in both local and deployed environments.
+	•Protected Routes: Properly handling session loading states and unauthorized redirects using next-auth.
+
+
+
 📚## Third-Party Libraries Used
 
 Beyond Next.js and NextAuth.js:
 	•	Three.js – 3D graphics
-  •Web Speech API – Voice greetings
+        •       Web Speech API – Voice greetings
 	•	React Three Fiber – Three.js in React
 	•	Tailwind CSS – Styling
 
