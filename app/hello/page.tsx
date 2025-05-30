@@ -22,7 +22,7 @@ function HelloContent() {
       utterance.rate = 0.8
       utterance.pitch = 1.1
       speechSynthesis.speak(utterance)
-    }, 300) // Slight delay helps on first mount or after login redirect
+    }, 300) 
 
     return () => clearTimeout(timeout)
   }, [session, voiceEnabled])
