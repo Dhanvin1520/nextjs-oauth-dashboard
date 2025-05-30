@@ -24,14 +24,31 @@ export function PepperoniParticles({ count = 50 }: { count?: number }) {
 
     return new ExtrudeGeometry(shape, extrudeSettings)
   }, [])
-
+  const gridSize = 5
+  const gridDepth = 2
+  const spacing = 8
+  
   const particles = useMemo(() => {
-    return Array.from({ length: count }, () => ({
-      position: [(Math.random() - 0.5) * 20, (Math.random() - 0.5) * 20, (Math.random() - 0.5) * 20],
-      rotation: [Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI],
-      speed: Math.random() * 0.02 + 0.01,
-      scale: 0.5 + Math.random() * 0.5,
-    }))
+    const tempParticles = []
+    for (let i = 0; i < count; i++) {
+      const xIdx = i % gridSize
+      const yIdx = Math.floor(i / gridSize) % gridSize
+      const zIdx = Math.floor(i / (gridSize * gridSize)) % gridDepth
+  
+      const baseX = (xIdx - gridSize / 2) * spacing
+      const baseY = (yIdx - gridSize / 2) * spacing
+      const baseZ = (zIdx - gridDepth / 2) * spacing
+  
+      const offset = () => (Math.random() - 0.5) * spacing * 0.5
+  
+      tempParticles.push({
+        position: [baseX + offset(), baseY + offset(), baseZ + offset()],
+        rotation: [Math.random() * Math.PI, Math.random() * Math.PI, Math.random() * Math.PI],
+        speed: Math.random() * 0.02 + 0.01,
+        scale: 1 + Math.random() * 1,
+      })
+    }
+    return tempParticles
   }, [count])
 
   useFrame(() => {
