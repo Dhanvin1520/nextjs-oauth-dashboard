@@ -1,10 +1,9 @@
 # 🍕 Pizza Dashboard - Modern Order Management System
-
+Dhanvin Vadlamudi
+#Live Link:https://nextjs-oauth-dashboard.vercel.app/
 A stunning, interactive pizza order dashboard built with Next.js 14, featuring 3D animations, voice integration, and Google OAuth authentication.
 
-#Live Link:https://nextjs-oauth-dashboard.vercel.app/
 ## ✨ Features
-
 - **🔐 Authentication**: Google OAuth with NextAuth.js
 - **🎨 3D Animations**: Interactive pizza slice particles and pizza loader using Three.js
 - **🔊 Voice Integration**: AI voice greetings using Web Speech API
@@ -22,41 +21,6 @@ A stunning, interactive pizza order dashboard built with Next.js 14, featuring 3
 - **Styling**: Tailwind CSS
 - **TypeScript**: Full type safety
 - **Deployment**: Vercel
-
-
-## 🎯 Key Features Explained
-
-### 3D Animations
-- **Pizza Slice**: Floating, rotating pizza slice on the hello page
-- **Pepperoni Particles**: Animated background particles
-- **Loading Animation**: 3D pizza loader during authentication
-
-### Voice Integration
-- Automatic voice greeting when entering the hello page
-- Toggle button to enable/disable voice features
-- Uses Web Speech API for text-to-speech
-
-### Protected Routes
-- `/hello` and `/orders` require authentication
-- Automatic redirect to login for unauthenticated users
-- Loading states during authentication checks
-
-### Order Management
-- Responsive table with order data
-- Sorting by Order ID or Date
-- Filtering by order status
-- Color-coded status badges
-
-
-📚 Third-Party Libraries Used
-
-Beyond Next.js and NextAuth.js:
-	•	Three.js – 3D graphics
-	•	React Three Fiber – Three.js in React
-	•	Tailwind CSS – Styling
-	•	Web Speech API – Voice greetings
-	•	clsx – Utility for className conditionals
-
 
 ## 📦 Installation & Setup
 
