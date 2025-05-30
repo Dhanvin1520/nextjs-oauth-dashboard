@@ -9,7 +9,7 @@ export function LoginForm() {
   const handleGoogleSignIn = async () => {
     setIsLoading(true)
     try {
-      await signIn("google", { callbackUrl: "/dashboard" })
+      await signIn("google", { callbackUrl: "/" })
     } catch (error) {
       console.error("Sign in error:", error)
     } finally {
