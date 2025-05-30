@@ -48,7 +48,6 @@ npm install
 
 
 # 3. Set Up Google OAuth
-
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Add authorized redirect URIs:
    - `http://localhost:3000/api/auth/callback/google` (development)
@@ -57,8 +56,6 @@ npm install
 # 4. Environment Variables
 
 Create a `.env.local` file in the root directory:
-
-\`\`\`env
 # NextAuth.js Configuration
 NEXTAUTH_URL=http://localhost:3000
 NEXTAUTH_SECRET=your-super-secret-key-here
