@@ -1,7 +1,7 @@
 "use client"
 
 import { useSession } from "next-auth/react"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Environment } from "@react-three/drei"
 import { PizzaSlice } from "../components/pizza-slice"
@@ -10,17 +10,25 @@ import { VoiceToggle } from "../components/voice-toggle"
 import { ProtectedRoute } from "../components/protected-route"
 
 function HelloContent() {
-  const { data: session } = useSession()
+  const { data: session, status } = useSession()
   const [voiceEnabled, setVoiceEnabled] = useState(true)
+  const greetedOnce = useRef(false)
 
   useEffect(() => {
-    if (session?.user?.name && voiceEnabled && "speechSynthesis" in window) {
+    if (
+      status === "authenticated" &&
+      session?.user?.name &&
+      voiceEnabled &&
+      "speechSynthesis" in window &&
+      !greetedOnce.current
+    ) {
       const utterance = new SpeechSynthesisUtterance(`Hello, ${session.user.name}!`)
       utterance.rate = 0.8
       utterance.pitch = 1.1
       speechSynthesis.speak(utterance)
+      greetedOnce.current = true 
     }
-  }, [session?.user?.name, voiceEnabled])
+  }, [session, status, voiceEnabled])
 
   return (
     <div className="min-h-screen relative overflow-hidden">
