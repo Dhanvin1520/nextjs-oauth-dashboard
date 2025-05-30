@@ -1,7 +1,7 @@
 "use client"
 
 import { useSession } from "next-auth/react"
-import { useEffect, useState } from "react"
+import { useEffect, useState, useRef } from "react"
 import { Canvas } from "@react-three/fiber"
 import { OrbitControls, Environment } from "@react-three/drei"
 import { PizzaSlice } from "../components/pizza-slice"
@@ -12,9 +12,17 @@ import { ProtectedRoute } from "../components/protected-route"
 function HelloContent() {
   const { data: session } = useSession()
   const [voiceEnabled, setVoiceEnabled] = useState(true)
+  const hasGreetedRef = useRef(false)
 
   useEffect(() => {
-    if (!session?.user?.name || !voiceEnabled || !window.hasOwnProperty("speechSynthesis")) return;
+    if (
+      !session?.user?.name ||
+      !voiceEnabled ||
+      hasGreetedRef.current || 
+      !window.hasOwnProperty("speechSynthesis")
+    ) return;
+
+    hasGreetedRef.current = true
 
     const timeout = setTimeout(() => {
       speechSynthesis.cancel()
@@ -22,7 +30,7 @@ function HelloContent() {
       utterance.rate = 0.8
       utterance.pitch = 1.1
       speechSynthesis.speak(utterance)
-    }, 300) 
+    }, 300)
 
     return () => clearTimeout(timeout)
   }, [session, voiceEnabled])
