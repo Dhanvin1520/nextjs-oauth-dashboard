@@ -49,18 +49,12 @@ export default function Home() {
       <div className="text-center">
         <h1 className="text-6xl font-bold text-orange-600 mb-4">🍕 Pizza Dashboard</h1>
         <p className="text-xl text-gray-600 mb-8">Welcome to your modern pizza order management system</p>
-        <div className="space-x-4">
+        <div>
           <a
             href="/hello"
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
           >
             Get Started
-          </a>
-          <a
-            href="/orders"
-            className="bg-gray-500 hover:bg-gray-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors"
-          >
-            View Orders
           </a>
         </div>
       </div>
