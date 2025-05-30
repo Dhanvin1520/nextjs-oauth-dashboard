@@ -47,14 +47,14 @@ cd pizza-dashboard-3d
 npm install
 
 
-### 3. Set Up Google OAuth
+## 3. Set Up Google OAuth
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Add authorized redirect URIs:
    - `http://localhost:3000/api/auth/callback/google` (development)
    - `https://your-domain.com/api/auth/callback/google` (production)
 
-### 4. Environment Variables
+## 4. Environment Variables
 
 Create a `.env.local` file in the root directory:
 
@@ -75,7 +75,9 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret-here
 npm run dev
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-##assumptions and  challenges faced
+--------
+
+##Assumptions and  challenges faced
 
 
 🧠 Voice Greeting Triggering: Ensured the greeting plays only once after login, not on every /hello route visit.
@@ -91,9 +93,13 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ###📚 Third-Party Libraries Used
 
 Beyond Next.js and NextAuth.js:
+
 Three.js – 3D graphics
+
 Web Speech API – Voice greetings
+
 React Three Fiber – Rendering Three.js in React
+
 Tailwind CSS – Styling
 
 🌟 Build by Dhanvin Vadlamudi
