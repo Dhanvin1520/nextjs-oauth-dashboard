@@ -77,7 +77,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 --------
 
-🧠 Assumptions and Challenges Faced
+
+🧠 ###Assumptions and Challenges Faced
 	•	Voice Greeting Triggering: Ensured the greeting plays only once after login, not on every /hello route visit.
 	•	3D Performance Optimization: Balanced animation quality with performance across devices.
 	•	OAuth Redirect Handling: Managed redirect URI transitions between development and production.
@@ -85,7 +86,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ⸻
 
-📚 Third-Party Libraries Used
+📚### Third-Party Libraries Used
 	•	Three.js – For 3D graphics
 	•	React Three Fiber – Rendering Three.js with React
 	•	Web Speech API – Voice greetings
