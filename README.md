@@ -19,9 +19,9 @@ A stunning, interactive pizza order dashboard built with Next.js 14, featuring 3
 
 - **Framework**: Next.js 14 with App Router
 - **Authentication**: NextAuth.js with Google OAuth
+- **TypeScript**: Full type safety
 - **3D Graphics**: Three.js with React Three Fiber
 - **Styling**: Tailwind CSS
-- **TypeScript**: Full type safety
 - **Deployment**: Vercel
 
 ## 📦 Installation & Setup
