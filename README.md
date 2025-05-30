@@ -87,10 +87,9 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 ## 📚 Third-Party Libraries Used
 
 - **Three.js** – For 3D graphics  
+- **Web Speech API** – Voice greetings
 - **React Three Fiber** – Rendering Three.js with React  
-- **Web Speech API** – Voice greetings  
 - **Tailwind CSS** – Styling  
-- **Radix UI** – UI primitives  
 - **NextAuth.js** – Authentication
 
 
