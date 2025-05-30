@@ -47,14 +47,14 @@ cd pizza-dashboard-3d
 npm install
 
 
-## 3. Set Up Google OAuth
+# 3. Set Up Google OAuth
 
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Add authorized redirect URIs:
    - `http://localhost:3000/api/auth/callback/google` (development)
    - `https://your-domain.com/api/auth/callback/google` (production)
 
-## 4. Environment Variables
+# 4. Environment Variables
 
 Create a `.env.local` file in the root directory:
 
@@ -75,29 +75,30 @@ GOOGLE_CLIENT_SECRET=your-google-client-secret-here
 npm run dev
 Open [http://localhost:3000](http://localhost:3000) in your browser.
 
---------
 
 
-🧠 ###Assumptions and Challenges Faced
-	•	Voice Greeting Triggering: Ensured the greeting plays only once after login, not on every /hello route visit.
-	•	3D Performance Optimization: Balanced animation quality with performance across devices.
-	•	OAuth Redirect Handling: Managed redirect URI transitions between development and production.
-	•	Protected Routes: Ensured session-aware rendering and unauthorized access redirection using NextAuth.
 
-⸻
+## 🧠 Assumptions and Challenges Faced
 
-📚### Third-Party Libraries Used
-	•	Three.js – For 3D graphics
-	•	React Three Fiber – Rendering Three.js with React
-	•	Web Speech API – Voice greetings
-	•	Tailwind CSS – Styling
-	•	Radix UI – UI primitives
-	•	NextAuth.js – Authentication
+- **Voice Greeting Triggering**: Ensured the greeting plays only once after login, not on every `/hello` route visit.  
+- **3D Performance Optimization**: Balanced animation quality with performance across devices.  
+- **OAuth Redirect Handling**: Managed redirect URI transitions between development and production.  
+- **Protected Routes**: Ensured session-aware rendering and unauthorized access redirection using NextAuth.
 
-⸻
+---
+
+## 📚 Third-Party Libraries Used
+
+- **Three.js** – For 3D graphics  
+- **React Three Fiber** – Rendering Three.js with React  
+- **Web Speech API** – Voice greetings  
+- **Tailwind CSS** – Styling  
+- **Radix UI** – UI primitives  
+- **NextAuth.js** – Authentication
+
 
 🌟 Build by Dhanvin Vadlamudi
 
-⸻
+
 
 
