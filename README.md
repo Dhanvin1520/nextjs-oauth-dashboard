@@ -1,7 +1,7 @@
 # 🍕 Pizza Dashboard - Modern Order Management System
 ##Dhanvin Vadlamudi
 
-##Live Link:https://nextjs-oauth-dashboard.vercel.app/
+👾Live Link: https://nextjs-oauth-dashboard.vercel.app/
 
 A stunning, interactive pizza order dashboard built with Next.js 14, featuring 3D animations, voice integration, and Google OAuth authentication.
 
