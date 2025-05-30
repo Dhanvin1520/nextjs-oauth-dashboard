@@ -12,7 +12,7 @@ import { ProtectedRoute } from "../components/protected-route"
 function HelloContent() {
   const { data: session, status } = useSession()
   const [voiceEnabled, setVoiceEnabled] = useState(true)
-  const greetedOnce = useRef(false)
+  const greetedOnce = useRef(false) 
 
   useEffect(() => {
     if (
@@ -26,7 +26,7 @@ function HelloContent() {
       utterance.rate = 0.8
       utterance.pitch = 1.1
       speechSynthesis.speak(utterance)
-      greetedOnce.current = true 
+      greetedOnce.current = true // prev
     }
   }, [session, status, voiceEnabled])
 
