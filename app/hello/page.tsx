@@ -26,7 +26,7 @@ function HelloContent() {
       utterance.rate = 0.8
       utterance.pitch = 1.1
       speechSynthesis.speak(utterance)
-      greetedOnce.current = true // prev
+      greetedOnce.current = true // pre
     }
   }, [session, status, voiceEnabled])
 
